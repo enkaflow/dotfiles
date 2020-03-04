@@ -1,0 +1,26 @@
+[http "https://bbgithub.dev.bloomberg.com"]
+    proxy = bproxy.tdmz1.bloomberg.com:80
+[user]
+    email = kwong487@bloomberg.net
+    name = Kevin Wong
+[push]
+    default = simple
+[core]
+    excludesfile = /home/kdubs/.gitignore
+[alias]
+    lgd = log --pretty=format:'%Cred%h%Creset%C(bold yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit -10
+    lg = log --pretty=format:'%Cred%h%Creset%C(bold yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -10
+    long = log --pretty=format:'%Cred%h%Creset%C(bold yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    longd = log --pretty=format:'%Cred%h%Creset%C(bold yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lb = !"for k in `git branch | sed 's/^..//'`; do echo \"`git show --pretty=format:'%ct %<(40)%ce %<(25)%cr' $k | head -1`\" $k; done | sort -k1 -r | sed 's/@bloomberg.net//' | sed 's/^[0-9]* //' | sed 's/           //'"
+    st = status
+    b = branch
+    co = checkout
+[help]
+    autocorrect = -1
+
+[url "bbgithub:"]
+    insteadOf = https://bbgithub.dev.bloomberg.com
+
+[http]
+    sslVerify = false
