@@ -1,8 +1,3 @@
-[http "https://bbgithub.dev.bloomberg.com"]
-    proxy = bproxy.tdmz1.bloomberg.com:80
-[user]
-    email = kwong487@bloomberg.net
-    name = Kevin Wong
 [push]
     default = simple
 [core]
@@ -18,9 +13,6 @@
     co = checkout
 [help]
     autocorrect = -1
-
-[url "bbgithub:"]
-    insteadOf = https://bbgithub.dev.bloomberg.com
 
 [http]
     sslVerify = false
